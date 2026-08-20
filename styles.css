@@ -28,3 +28,9 @@ html {
   font-size: 4rem;
   color: white;
 }
+
+#secondaryTimeInfo {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 3rem;
+  color: rgb(212,212,212);
+}
