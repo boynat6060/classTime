@@ -5,13 +5,13 @@ A (somewhat) basic clock website that tells me how much longer is left in class,
 
 ## TODO
 - [x] Create README.md
-- [ ] Create index.html
-- [ ] Create styles.css
-- [ ] Create script.js
-- [ ] Start building basic website framework
+- [x] Create index.html
+- [x] Create styles.css
+- [x] Create script.js
+- [x] Start building basic website framework
   - [ ] Completed?
-- [ ] Started styling guidelines
-  - [ ] Import Font?
+- [x] Started styling guidelines
+  - [x] Import Font?
   - [ ] Completed?
 - [ ] Start programming functionality
   - [ ] Basic Clock
