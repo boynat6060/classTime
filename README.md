@@ -3,7 +3,7 @@ A (somewhat) basic clock website that tells me how much longer is left in class,
 
 <br>
 
-##TODO
+## TODO
 - [x] Create README.md
 - [ ] Create index.html
 - [ ] Create styles.css
