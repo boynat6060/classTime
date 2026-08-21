@@ -5,6 +5,7 @@ let ilt = new Date();
 let p4 = new Date();
 let p5 = new Date();
 let p6 = new Date();
+let currentTime = new Date();
 
 const date = new Date();
 const day = date.getDay();
@@ -32,4 +33,9 @@ const mainTimeTxt = document.getElementById("mainTimeTxt");
 
 const tmfmt = {hour: 'numeric', minute: '2-digit'};
 
-mainTimeTxt.textContent = p1.toLocaleTimeString([], tmfmt);
+function displayCurrentTime() {
+  mainTimeTxt.textContent = currentTime.toLocaleTimeString([], tmfmt);
+}
+
+displayCurrentTime();
+setInterval(displayCurrentTime(), 1000);
