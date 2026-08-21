@@ -15,3 +15,6 @@ if (day === 3) {
 else {
   p1.setHours(10,55,0,0);
 }
+
+const mainTimeTxt = document.getElementById("mainTimeTxt");
+mainTimeTxt.textContent = p1.toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'});
