@@ -31,7 +31,7 @@ else {
 
 const mainTimeTxt = document.getElementById("mainTimeTxt");
 
-const tmfmt = {hour: 'numeric', minute: '2-digit'};
+const tmfmt = {hour: 'numeric', minute: '2-digit', second: '2-digit'};
 
 function displayCurrentTime() {
   mainTimeTxt.textContent = currentTime.toLocaleTimeString([], tmfmt);
