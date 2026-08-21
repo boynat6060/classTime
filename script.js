@@ -17,4 +17,7 @@ else {
 }
 
 const mainTimeTxt = document.getElementById("mainTimeTxt");
-mainTimeTxt.textContent = p1.toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'});
+
+const tmfmt = {hour: 'numeric', minute: '2-digit'};
+
+mainTimeTxt.textContent = p1.toLocaleTimeString([], tmfmt);
