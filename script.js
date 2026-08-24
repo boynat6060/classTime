@@ -38,7 +38,7 @@ function displayCurrentTime() {
 }
 
 displayCurrentTime();
-setInterval(displayCurrentTime, 1000);
+setInterval(displayCurrentTime, 900);
 
 // 1. Group periods in an array with label strings for easy tracking
 const schedule = [
@@ -54,19 +54,27 @@ const schedule = [
 function getUpcomingTarget() {
   const now = new Date();
   
-  // 2. Look through the schedule array one-by-one
+  // Look through the schedule array one-by-one
   for (let i = 0; i < schedule.length; i++) {
-    // 3. Return the very first period whose time is in the future
+    // Return the very first period whose time is in the future
     if (schedule[i].time > now) {
       return schedule[i]; 
     }
   }
   
-  // 4. Fallback if the entire school day is over
+  // Fallback if the entire school day is over
   return null; 
 }
 
+let upcoming = getUpcomingTarget();
+
 function countDown() {
   const now = new Date();
-  const CD = upcoming - now;
+  const CD = upcoming.time - now;
+
+  document.getElementById("secondaryTimeInfo").textContent = CD;
 }
+
+countDown();
+setInterval(countDown, 900);
+
