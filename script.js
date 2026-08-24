@@ -66,19 +66,19 @@ function getUpcomingTarget() {
   return null; 
 }
 
-const hours = Math.floor(CD / (1000 * 60 * 60));
-const minutes = Math.floor((CD % (1000 * 60 * 60)) / 1000);
-const seconds = Math.floor((CD % (1000 * 60)) / 1000);
-
-const fHours = String(hours).padStart(2,'0');
-const fMinutes = String(minutes).padStart(2,'0');
-const fSeconds = String(seconds).padStart(2,'0');
-
 let upcoming = getUpcomingTarget();
 
 function countDown() {
   const now = new Date();
   const CD = upcoming.time - now;
+
+  const hours = Math.floor(CD / (1000 * 60 * 60));
+  const minutes = Math.floor((CD % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((CD % (1000 * 60)) / 1000);
+  
+  const fHours = String(hours).padStart(2,'0');
+  const fMinutes = String(minutes).padStart(2,'0');
+  const fSeconds = String(seconds).padStart(2,'0');
   
   document.getElementById("secondaryTimeInfo").textContent = `Only ${fHours} : ${fMinutes} until ${upcoming.name} is over.`
 }
