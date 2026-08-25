@@ -80,7 +80,7 @@ function countDown() {
   const fMinutes = String(minutes).padStart(2,'0');
   const fSeconds = String(seconds).padStart(2,'0');
 
-  if (seconds <= 60) {
+  if (hours === 0) {
     document.getElementById("secondaryTimeInfo").textContent = `Only ${fMinutes} : ${fSeconds} until ${upcoming.name} is over.`
   } else {
     document.getElementById("secondaryTimeInfo").textContent = `Only ${fHours} : ${fMinutes} until ${upcoming.name} is over.`
