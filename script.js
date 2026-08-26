@@ -42,13 +42,13 @@ setInterval(displayCurrentTime, 900);
 
 // 1. Group periods in an array with label strings for easy tracking
 const schedule = [
-  { name: "Period 1", time: p1 },
-  { name: "Period 2", time: p2 },
-  { name: "Period 3", time: p3 },
-  { name: "ILT",      time: ilt },
-  { name: "Period 4", time: p4 },
-  { name: "Period 5", time: p5 },
-  { name: "Period 6", time: p6 }
+  { name: "First Period", time: p1 },
+  { name: "Second Period", time: p2 },
+  { name: "Third Period", time: p3 },
+  { name: "ILT", time: ilt },
+  { name: "Fourth Period", time: p4 },
+  { name: "Fifth Period", time: p5 },
+  { name: "Sixth Period", time: p6 }
 ];
 
 function getUpcomingTarget() {
@@ -80,10 +80,16 @@ function countDown() {
   const fMinutes = String(minutes).padStart(2,'0');
   const fSeconds = String(seconds).padStart(2,'0');
 
-  if (hours === 0) {
-    document.getElementById("secondaryTimeInfo").textContent = `Only ${fMinutes} : ${fSeconds} until ${upcoming.name} is over.`
+  let secondaryTimeInfo = document.getElementById("secondaryTimeInfo");
+
+  if (hours === 0 && minutes !== 0) {
+    secondaryTimeInfo.textContent = `Only ${fMinutes} minutes and ${fSeconds} until ${upcoming.name} is over.`;
+  } else if (hours === 0 && minutes === 0) {
+    secondaryTimeInfo.textContent = `${upcoming.name} ends in ${fSeconds}!`;
+  } else if (now === null) {
+    secondaryTimeInfo.textContent = "School is not in session!";
   } else {
-    document.getElementById("secondaryTimeInfo").textContent = `Only ${fHours} : ${fMinutes} until ${upcoming.name} is over.`
+    secondaryTimeInfo.textContent = `Only ${fHours} : ${fMinutes} until ${upcoming.name} is over.`;
   }
 }
 
