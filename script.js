@@ -118,3 +118,6 @@ function endOfDayCountDown() {
     timeInfo3.textContent = `School ends in ${fEODHours}:${fEODMinutes}:${fEODSeconds}.`;
   }
 }
+
+endOfDayCountDown();
+setInterval(endOfDayCountDown, 900);
