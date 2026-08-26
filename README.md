@@ -13,10 +13,10 @@ A (somewhat) basic clock website that tells me how much longer is left in class,
 - [x] Started styling guidelines
   - [x] Import Font?
   - [ ] Completed?
-- [ ] Start programming functionality
-  - [ ] Basic Clock
-  - [ ] Set class ending times
-    - [ ] Variables/constants?
+- [x] Start programming functionality
+  - [x] Basic Clock
+  - [x] Set class ending times
+    - [x] Variables/constants?
   - [ ] Text with time left in class
   - [ ] Minutes left in the day
   - [ ] Days left in the week
