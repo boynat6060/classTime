@@ -83,11 +83,11 @@ function countDown() {
   let secondaryTimeInfo = document.getElementById("secondaryTimeInfo");
 
   if (hours === 0 && minutes !== 0) {
-    secondaryTimeInfo.textContent = `Only ${fMinutes} minutes and ${fSeconds} until ${upcoming.name} is over.`;
+    secondaryTimeInfo.textContent = `Only ${fMinutes} minutes and ${fSeconds} seconds until ${upcoming.name} is over.`;
   } else if (hours === 0 && minutes === 0) {
     secondaryTimeInfo.textContent = `${upcoming.name} ends in ${fSeconds}!`;
   } else if (now === null) {
-    secondaryTimeInfo.textContent = "School is not in session!";
+    secondaryTimeInfo.remove();
   } else {
     secondaryTimeInfo.textContent = `Only ${fHours} : ${fMinutes} until ${upcoming.name} is over.`;
   }
@@ -95,3 +95,26 @@ function countDown() {
 
 countDown();
 setInterval(countDown, 900);
+
+let timeInfo3 = document.getElementById("timeInfo3");
+
+function endOfDayCountDown() {
+  let endOfDay = new Date();
+  endofDay.setHours(15,30,0,0);
+  const now2 = new Date();
+  endOfDayCD = endOfDay - now2;
+
+  const EODhours = Math.floor(endofDayCD / (1000 * 60 * 60));
+  const EODminutes = Math.floor((endofDayCD % (1000 * 60 * 60)) / (1000 * 60));
+  const EODseconds = Math.floor((endofDayCD % (1000 * 60)) / 1000);
+  
+  const fEODHours = String(EODhours).padStart(2,'0');
+  const fEODMinutes = String(EODminutes).padStart(2,'0');
+  const fEODSeconds = String(EODseconds).padStart(2,'0');
+
+  if (endOfDayCD === 0) {
+    timeInfo3.textContent = `School is over!`;
+  } else {
+    timeInfo3.textContent = `School ends in ${fEODHours}:${fEODMinutes}:${fEODSeconds}.`;
+  }
+}
