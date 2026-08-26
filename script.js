@@ -100,19 +100,19 @@ let timeInfo3 = document.getElementById("timeInfo3");
 
 function endOfDayCountDown() {
   let endOfDay = new Date();
-  endofDay.setHours(15,30,0,0);
+  endOfDay.setHours(15,30,0,0);
   const now2 = new Date();
-  endOfDayCD = endOfDay - now2;
+  const endOfDayCD = endOfDay - now2;
 
-  const EODhours = Math.floor(endofDayCD / (1000 * 60 * 60));
-  const EODminutes = Math.floor((endofDayCD % (1000 * 60 * 60)) / (1000 * 60));
-  const EODseconds = Math.floor((endofDayCD % (1000 * 60)) / 1000);
+  const EODhours = Math.floor(endOfDayCD / (1000 * 60 * 60));
+  const EODminutes = Math.floor((endOfDayCD % (1000 * 60 * 60)) / (1000 * 60));
+  const EODseconds = Math.floor((endOfDayCD % (1000 * 60)) / 1000);
   
   const fEODHours = String(EODhours).padStart(2,'0');
   const fEODMinutes = String(EODminutes).padStart(2,'0');
   const fEODSeconds = String(EODseconds).padStart(2,'0');
 
-  if (endOfDayCD === 0) {
+  if (endOfDayCD <= 0) {
     timeInfo3.textContent = `School is over!`;
   } else {
     timeInfo3.textContent = `School ends in ${fEODHours}:${fEODMinutes}:${fEODSeconds}.`;
