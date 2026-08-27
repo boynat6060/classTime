@@ -45,6 +45,12 @@ html {
   color: rgb(249, 238, 238);
 }
 
+#bellSched {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 3rem;
+  color: rgb(249, 238, 238);
+}
+
 @keyframes bgAnimation {
   0% {background-color: rgb(68, 213, 249);}
   25% {background-color: rgb(93, 238, 132);}

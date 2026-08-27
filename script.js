@@ -9,6 +9,8 @@ let p6 = new Date();
 const date = new Date();
 const day = date.getDay();
 
+let sched;
+
 if (day === 3) {
   p1.setHours(9,55,0,0);
   p2.setHours(10,40,0,0);
@@ -27,8 +29,6 @@ else {
   p5.setHours(13,59,0,0);
   p6.setHours(15,30,0,0);
 }
-
-const mainTimeTxt = document.getElementById("mainTimeTxt");
 
 const tmfmt = {hour: 'numeric', minute: '2-digit', second: '2-digit'};
 
