@@ -1,3 +1,4 @@
+//var declaration
 let p1 = new Date();
 let p2 = new Date();
 let p3 = new Date();
@@ -6,11 +7,14 @@ let p4 = new Date();
 let p5 = new Date();
 let p6 = new Date();
 
+//finds the day
 const date = new Date();
 const day = date.getDay();
 
+//schedule declaration
 let sched;
 
+//checks for Trojan Check In
 if (day === 3) {
   p1.setHours(9,55,0,0);
   p2.setHours(10,40,0,0);
@@ -30,13 +34,18 @@ else {
   p6.setHours(15,30,0,0);
 }
 
+//time formatting shortcut
 const tmfmt = {hour: 'numeric', minute: '2-digit', second: '2-digit'};
+//mainTimeTxt shortcut
+const mainTimeTxt = document.getElementById("mainTimeTxt");
 
+//grabs mainTimeTxt and changes its content to the formatted time
 function displayCurrentTime() {
   const currentTime = new Date();
   mainTimeTxt.textContent = currentTime.toLocaleTimeString([], tmfmt);
 }
 
+//runs the function and then calls it every 900 miliseconds
 displayCurrentTime();
 setInterval(displayCurrentTime, 900);
 
@@ -51,6 +60,7 @@ const schedule = [
   { name: "Sixth Period", time: p6 }
 ];
 
+//finds the next class period
 function getUpcomingTarget() {
   const now = new Date();
   
@@ -66,12 +76,14 @@ function getUpcomingTarget() {
   return null; 
 }
 
+//assigns upcoming to whateveer getUpcomingTarget() returns (selects the next class period)
 let upcoming = getUpcomingTarget();
 
 function countDown() {
   const now = new Date();
   const CD = upcoming.time - now;
-
+  
+  //divides miliseconds to get into hours, mins, seconds
   const hours = Math.floor(CD / (1000 * 60 * 60));
   const minutes = Math.floor((CD % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((CD % (1000 * 60)) / 1000);
@@ -82,6 +94,7 @@ function countDown() {
 
   let secondaryTimeInfo = document.getElementById("secondaryTimeInfo");
 
+  //selects what sentence version to use
   if (hours === 0 && minutes !== 0) {
     secondaryTimeInfo.textContent = `Only ${fMinutes} minutes and ${fSeconds} seconds until ${upcoming.name} is over.`;
   } else if (hours === 0 && minutes === 0) {
@@ -93,11 +106,14 @@ function countDown() {
   }
 }
 
+//runs the function and then calls it every 900 miliseconds.
 countDown();
 setInterval(countDown, 900);
 
+//shortcut for timeInfo3
 let timeInfo3 = document.getElementById("timeInfo3");
 
+//figures out how long until 330, grabs timeInfo3 and replaces it with a formatted sentence containing the countdown
 function endOfDayCountDown() {
   let endOfDay = new Date();
   endOfDay.setHours(15,30,0,0);
@@ -119,5 +135,6 @@ function endOfDayCountDown() {
   }
 }
 
+//runs the function and then calls it every 900 miliseconds.
 endOfDayCountDown();
 setInterval(endOfDayCountDown, 900);
