@@ -1,0 +1,6 @@
+-animate marquee
+    -css
+-define days left, days in, hours in, etc
+    -js
+target spans and replace with dynamic data
+    -js

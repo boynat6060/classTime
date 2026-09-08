@@ -23,6 +23,7 @@ if (day === 3) {
   p4.setHours(13,15,0,0);
   p5.setHours(14,0,0,0);
   p6.setHours(15,30,0,0);
+  sched = "Bell Schedule 2 - Trojan Check In"
 }
 else {
   p1.setHours(9,56,0,0);
@@ -32,6 +33,7 @@ else {
   p4.setHours(13,10,0,0);
   p5.setHours(13,59,0,0);
   p6.setHours(15,30,0,0);
+  sched = "Bell Schedule 1"
 }
 
 //time formatting shortcut
@@ -138,3 +140,5 @@ function endOfDayCountDown() {
 //runs the function and then calls it every 900 miliseconds.
 endOfDayCountDown();
 setInterval(endOfDayCountDown, 900);
+
+document.getElementById("bellSched").textContent = sched;

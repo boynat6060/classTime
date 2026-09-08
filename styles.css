@@ -68,3 +68,18 @@ html {
 }
 */
 
+/*
+@media (max-width: 768px) and (orientation: portrait) {
+  .headerBox {
+    display: none;
+  }
+}
+*/
+
+.headerBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 2vh;
+}
