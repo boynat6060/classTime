@@ -82,4 +82,10 @@ html {
   left: 0;
   width: 100%;
   margin-top: 2vh;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
 }
