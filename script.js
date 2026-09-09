@@ -142,3 +142,7 @@ endOfDayCountDown();
 setInterval(endOfDayCountDown, 900);
 
 document.getElementById("bellSched").textContent = sched;
+
+let mq1;
+
+document.getElementById("mq1").textContent = mq1;
