@@ -83,9 +83,22 @@ html {
   width: 100%;
   margin-top: 2vh;
   overflow: hidden;
+  display: flex;
 }
 
-.marquee {
+#mq1, #mq2, #mq3, #mq4, #mq5, #mq6 {
   display: flex;
   width: max-content;
+  animation: scroll 10s linear infinite;
+}
+
+.marquee span {
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@keyframes scroll {
+  0% {transform: translateX(0%);}
+  100% {transform: translateX(-100%);}
 }
