@@ -144,7 +144,32 @@ setInterval(endOfDayCountDown, 900);
 document.getElementById("bellSched").textContent = sched;
 
 let mq1;
+let mq2;
+let mq3;
 
+/*
 document.getElementById("mq1").innerText = "This is some text";
 document.getElementById("mq2").innerText = "This is more text";
 document.getElementById("mq3").innerText = "This is even more text";
+*/
+
+//keeps track of time in school
+function timeInSchool() {
+  let dayStart = new Date();
+  dayStart.setHours(8,30,0,0);
+  const timeInSchool = dayStart - now2;
+
+  const TIShours = Math.floor(timeInSchool / (1000 * 60 * 60));
+  const TISminutes = Math.floor((timeInSchool % (1000 * 60 * 60)) / (1000 * 60));
+
+  if (timeInSchool <= 0) {
+    document.getElementById("mq1").textContent = `You are not in school.`;
+    document.getElementById("mq4").textContent = `You are not in school.`;
+  } else if (TIShours == 1 && TISminutes == 1) {
+    document.getElementById("mq1").textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minute.`
+    document.getElementById("mq4").textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minute.`
+  } else if (TIShours == 1 && TISminutes != 1) {
+    document.getElementById("mq1").textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.`
+    document.getElementById("mq1").textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.`
+  } else if (TIShours != )
+}
