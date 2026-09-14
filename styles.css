@@ -85,7 +85,6 @@ html {
   width: 100%;
   margin-top: 2vh;
   overflow: hidden;
-  display: flex;
   justify-content: center;
 }
 
