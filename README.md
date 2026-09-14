@@ -17,8 +17,8 @@ A (somewhat) basic clock website that tells me how much longer is left in class,
   - [x] Basic Clock
   - [x] Set class ending times
     - [x] Variables/constants?
-  - [ ] Text with time left in class
-  - [ ] Minutes left in the day
+  - [x] Text with time left in class
+  - [x] Minutes left in the day
   - [ ] Days left in the week
   - [ ] Days left in the year
   - [ ] Completed?
