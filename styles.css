@@ -86,11 +86,15 @@ html {
   margin-top: 2vh;
   overflow: hidden;
   justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 #mq1, #mq2, #mq3, #mq4, #mq5, #mq6 {
   width: max-content;
   animation: scroll 30s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .marquee span {
