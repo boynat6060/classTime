@@ -189,6 +189,7 @@ function timeInSchool() {
 timeInSchool();
 setInterval(timeInSchool, 900);
 
+//counts the days until saturday
 function daysLeftInWeek() {
   const dayNow = new Date().getDay(); //finds todays day, sunday = 0, monday = 1, etc
   const daysTillWeekend = 6 - dayNow;
@@ -205,5 +206,5 @@ function daysLeftInWeek() {
   }
 }
 
-daysLeftInWeekend();
-setInterval(daysLeftInWeekend, 900);
+daysLeftInWeek();
+setInterval(daysLeftInWeek, 900);
