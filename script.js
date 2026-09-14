@@ -175,5 +175,11 @@ function timeInSchool() {
   } else if (TIShours == 1 && TISminutes != 1) {
     mq1.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.`
     mq4.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.`
-  } else if (TIShours != 1)
+  } else if (TIShours != 1 && TISminutes == 1) {
+    mq1.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minute.`
+    mq4.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minute.`
+  } else {
+    mq1.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minutes.`
+    mq4.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minutes.`
+  }
 }
