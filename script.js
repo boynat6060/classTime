@@ -143,9 +143,13 @@ setInterval(endOfDayCountDown, 900);
 
 document.getElementById("bellSched").textContent = sched;
 
-let mq1;
-let mq2;
-let mq3;
+//shortcuts for marquee elementts
+let mq1 = document.getElementById("mq1");
+let mq2 = document.getElementById("mq2");
+let mq3 = document.getElementById("mq3");
+let mq4 = document.getElementById("mq4");
+let mq5 = document.getElementById("mq5");
+let mq6 = document.getElementById("mq6");
 
 /*
 document.getElementById("mq1").innerText = "This is some text";
@@ -163,13 +167,13 @@ function timeInSchool() {
   const TISminutes = Math.floor((timeInSchool % (1000 * 60 * 60)) / (1000 * 60));
 
   if (timeInSchool <= 0) {
-    document.getElementById("mq1").textContent = `You are not in school.`;
-    document.getElementById("mq4").textContent = `You are not in school.`;
+    mq1.textContent = `You are not in school.`;
+    mq4.textContent = `You are not in school.`;
   } else if (TIShours == 1 && TISminutes == 1) {
-    document.getElementById("mq1").textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minute.`
-    document.getElementById("mq4").textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minute.`
+    mq1.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minute.`
+    mq4.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minute.`
   } else if (TIShours == 1 && TISminutes != 1) {
-    document.getElementById("mq1").textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.`
-    document.getElementById("mq1").textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.`
-  } else if (TIShours != )
+    mq1.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.`
+    mq4.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.`
+  } else if (TIShours != 1)
 }
