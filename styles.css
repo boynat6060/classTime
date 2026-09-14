@@ -5,7 +5,9 @@
 }
 
 body {
-    margin: 0px;
+  margin: 0px;
+  font-family: "Bruno Ace SC", sans-serif;
+  color: white;
 }
 
 html {
@@ -84,12 +86,13 @@ html {
   margin-top: 2vh;
   overflow: hidden;
   display: flex;
+  justify-content: center;
 }
 
 #mq1, #mq2, #mq3, #mq4, #mq5, #mq6 {
   display: flex;
   width: max-content;
-  animation: scroll 10s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .marquee span {
@@ -99,6 +102,6 @@ html {
 }
 
 @keyframes scroll {
-  0% {transform: translateX(0%);}
-  100% {transform: translateX(-100%);}
+  0% {transform: translateX(100vw);}
+  100% {transform: translateX(-100vw);}
 }

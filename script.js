@@ -161,11 +161,13 @@ document.getElementById("mq3").innerText = "This is even more text";
 function timeInSchool() {
   let dayStart = new Date();
   dayStart.setHours(8,30,0,0);
-  const timeInSchool = dayStart - now2;
+  let now3 = new Date();
+  const timeInSchool = now3 - dayStart;
 
   const TIShours = Math.floor(timeInSchool / (1000 * 60 * 60));
   const TISminutes = Math.floor((timeInSchool % (1000 * 60 * 60)) / (1000 * 60));
 
+  //if formatting to add an S if needed - next time use dynamic formatting
   if (timeInSchool <= 0) {
     mq1.textContent = `You are not in school.`;
     mq4.textContent = `You are not in school.`;
@@ -183,3 +185,6 @@ function timeInSchool() {
     mq4.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minutes.`
   }
 }
+
+timeInSchool();
+setInterval(timeInSchool, 900);
