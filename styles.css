@@ -89,7 +89,6 @@ html {
 }
 
 #mq1, #mq2, #mq3, #mq4, #mq5, #mq6 {
-  display: flex;
   width: max-content;
   animation: scroll 30s linear infinite;
 }
