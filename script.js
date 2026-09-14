@@ -194,7 +194,7 @@ function daysLeftInWeek() {
   const dayNow = new Date().getDay(); //finds todays day, sunday = 0, monday = 1, etc
   const daysTillWeekend = 6 - dayNow;
 
-  if (daysTillWeekend = 1) {
+  if (daysTillWeekend == 1) {
     mq2.textContent = `  There is ${daysTillWeekend} day until the weekend.  `
     mq5.textContent = `  There is ${daysTillWeekend} day until the weekend.  `
   } else if (daysTillWeekend == 0 || daysTillWeekend == -1) {
