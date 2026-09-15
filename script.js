@@ -167,22 +167,24 @@ function timeInSchool() {
   const TIShours = Math.floor(timeInSchool / (1000 * 60 * 60));
   const TISminutes = Math.floor((timeInSchool % (1000 * 60 * 60)) / (1000 * 60));
 
+  console.log("timeInSchool calculated.");
+
   //if formatting to add an S if needed - next time use dynamic formatting
   if (timeInSchool <= 0) {
     mq1.textContent = `You are not in school.`;
-    mq4.textContent = `You are not in school.`;
+   // mq4.textContent = `You are not in school.`;
   } else if (TIShours == 1 && TISminutes == 1) {
     mq1.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minute.  `
-    mq4.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minute.  `
+    //mq4.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minute.  `
   } else if (TIShours == 1 && TISminutes != 1) {
     mq1.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.  `
-    mq4.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.  `
+    //mq4.textContent = `You have been in school for ${TIShours} hour and ${TISminutes} minutes.  `
   } else if (TIShours != 1 && TISminutes == 1) {
     mq1.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minute.  `
-    mq4.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minute.  `
+    //mq4.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minute.  `
   } else {
     mq1.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minutes.  `
-    mq4.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minutes.  `
+    //mq4.textContent = `You have been in school for ${TIShours} hours and ${TISminutes} minutes.  `
   }
 }
 
@@ -196,15 +198,15 @@ function daysLeftInWeek() {
 
   if (daysTillWeekend == 1) {
     mq2.textContent = `  There is ${daysTillWeekend} day until the weekend.  `
-    mq5.textContent = `  There is ${daysTillWeekend} day until the weekend.  `
+    //mq5.textContent = `  There is ${daysTillWeekend} day until the weekend.  `
   } else if (daysTillWeekend == 0 || daysTillWeekend == -1) {
     mq2.textContent = `  It is the weekend.  `
-    mq5.textContent = `  It is the weekend.  `
+    //mq5.textContent = `  It is the weekend.  `
   } else {
     mq2.textContent = `  There are ${daysTillWeekend} days until the weekend.  `
-    mq5.textContent = `  There are ${daysTillWeekend} days until the weekend.  `
+    //mq5.textContent = `  There are ${daysTillWeekend} days until the weekend.  `
   }
 }
 
 daysLeftInWeek();
-setInterval(daysLeftInWeek, 900);
+setInterval(daysLeftInWeek, 60000);
