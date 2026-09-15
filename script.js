@@ -199,7 +199,7 @@ function daysLeftInWeek() {
   if (daysTillWeekend == 1) {
     mq2.textContent = `  There is ${daysTillWeekend} day until the weekend.  `
     //mq5.textContent = `  There is ${daysTillWeekend} day until the weekend.  `
-  } else if (daysTillWeekend == 0 || daysTillWeekend == -1) {
+  } else if (daysTillWeekend == 0 || daysTillWeekend == 6) {
     mq2.textContent = `  It is the weekend.  `
     //mq5.textContent = `  It is the weekend.  `
   } else {
@@ -210,3 +210,32 @@ function daysLeftInWeek() {
 
 daysLeftInWeek();
 setInterval(daysLeftInWeek, 60000);
+
+//days until targetDate
+function findDaysUntil(targetDate) {
+  const today = new Date();
+  const future = new Date(targetDate);
+
+  today.setHours(0, 0, 0, 0);
+  furute.setHours(0, 0, 0, 0);
+  
+  const milisecondsTill = future - today;
+
+  const daysTill = (milisecondsTill * (1000 * 60 * 60 * 24));
+
+  //replaces the called function with daysTill
+  return daysTill;
+}
+
+function putDays {
+  if (findDaysUntil("2027-05-27") == 1) {
+    mq3.textContent = `  There is 1 day until school lets out!  `
+    //mq5.textContent = `  There is 1 day until school lets out!  `
+  } else {
+    mq3.textContent = `  Summer Break starts in ${findDaysUntil("2027-05-27")} days. `
+    //mq5.textContent = `  Summer Break starts in ${findDaysUntil("2027-05-27")} days.!  `
+  }
+}
+
+putDays();
+setInterval(putDays, 60000);
