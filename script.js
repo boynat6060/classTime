@@ -230,7 +230,7 @@ function findDaysUntil(targetDate) {
 let upcomingEventName = "Fall Break";
 
 function putDays() {
-  if (findDaysUntil("2027-05-27") == 1) {
+  if (findDaysUntil("2026-11-23") == 1) {
     mq3.textContent = `  There is 1 day until school lets out!  `
     //mq5.textContent = `  There is 1 day until school lets out!  `
   } else {
